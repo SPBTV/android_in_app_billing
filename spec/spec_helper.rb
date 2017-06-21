@@ -1,6 +1,6 @@
 require "bundler/setup"
 require "android_in_app_billing"
-require "factory_girl"
+require "android_in_app_billing/factories"
 require "webmock"
 require "vcr"
 
@@ -20,7 +20,6 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 
   config.before(:suite) do
-    FactoryGirl.find_definitions
     WebMock.enable!
   end
 end
