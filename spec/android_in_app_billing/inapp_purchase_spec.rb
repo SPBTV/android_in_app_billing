@@ -44,7 +44,7 @@ RSpec.describe AndroidInAppBilling::InappPurchase do
   end
 
   describe '#attributes' do
-    subject { described_class.new(build(:raw_inapp_purchase)).attributes }
+    subject { described_class.new(build(:android_in_app_billing_raw_inapp_purchase)).attributes }
 
     it 'contains only purchase data' do
       purchase_data_fields = [
@@ -56,11 +56,11 @@ RSpec.describe AndroidInAppBilling::InappPurchase do
   end
 
   describe '#signature_valid?' do
-    let(:raw_inapp_purchase) { build(:raw_inapp_purchase) }
+    let(:raw_inapp_purchase) { build(:android_in_app_billing_raw_inapp_purchase) }
     let(:data) { raw_inapp_purchase[:data] }
     let(:signature) { raw_inapp_purchase[:signature] }
 
-    before { AndroidInAppBilling.config.package_public_key = build(:public_key) }
+    before { AndroidInAppBilling.config.package_public_key = AndroidInAppBilling::Testing::PUBLIC_KEY }
 
     subject { described_class.new(data: data, signature: signature).signature_valid? }
 

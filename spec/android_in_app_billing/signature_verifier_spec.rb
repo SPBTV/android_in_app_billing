@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 RSpec.describe AndroidInAppBilling::SignatureVerifier do
-  let(:raw_inapp_purchase) { build(:raw_inapp_purchase) }
+  let(:raw_inapp_purchase) { build(:android_in_app_billing_raw_inapp_purchase) }
   let(:data) { raw_inapp_purchase[:data] }
   let(:signature) { Base64.decode64(raw_inapp_purchase[:signature]) }
 
   subject { described_class.new(data: data, signature: signature).call }
 
-  before { AndroidInAppBilling.config.package_public_key = build(:public_key) }
+  before { AndroidInAppBilling.config.package_public_key = AndroidInAppBilling::Testing::PUBLIC_KEY }
 
   context 'signature is valid' do
     it { is_expected.to be(true) }
