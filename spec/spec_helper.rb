@@ -1,6 +1,6 @@
 require "bundler/setup"
 require "android_in_app_billing"
-require "android_in_app_billing/factories"
+require "android_in_app_billing/testing"
 require "webmock"
 require "vcr"
 

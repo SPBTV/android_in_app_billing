@@ -1,15 +1,15 @@
 # frozen_string_literal: true
-FactoryGirl.define do
-  # Both public and private keys were generated using this code:
-  #
-  # require 'openssl'
-  #
-  # key = OpenSSL::PKey::RSA.new(2048)
-  #
-  # key.public_key.to_pem # => public key
-  # key.to_pem # => private key
-  factory :android_in_app_billing_public_key, class: 'String' do
-    public_key <<-KEY.gsub(/^\s*/, '')
+module AndroidInAppBilling
+  module Testing
+    # Both public and private keys were generated using this code:
+    #
+    # require 'openssl'
+    #
+    # key = OpenSSL::PKey::RSA.new(2048)
+    #
+    # key.public_key.to_pem # => public key
+    # key.to_pem # => private key
+    PUBLIC_KEY = <<-KEY.gsub(/^\s*/, '')
       -----BEGIN PUBLIC KEY-----
       MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0VZoxr2Z4Z55PR9DnBEl
       xNneoXvBEofqT0lstG/TKLaNdIGnyZASO0cupb1U08H/2qGIRFznSCJyW4H69Qsv
@@ -21,12 +21,8 @@ FactoryGirl.define do
       -----END PUBLIC KEY-----
     KEY
 
-    initialize_with { attributes.values.join }
-  end
-
-  # Is used only for purchase data signing
-  factory :android_in_app_billing_private_key, class: 'String' do
-    private_key <<-KEY.gsub(/^\s*/, '')
+    # Is used only for purchase data signing
+    PRIVATE_KEY = <<-KEY.gsub(/^\s*/, '')
       -----BEGIN RSA PRIVATE KEY-----
       MIIEowIBAAKCAQEA0VZoxr2Z4Z55PR9DnBElxNneoXvBEofqT0lstG/TKLaNdIGn
       yZASO0cupb1U08H/2qGIRFznSCJyW4H69QsvFLQQCPy7mitA9HPK5FQ9/7//lwNB
@@ -55,7 +51,5 @@ FactoryGirl.define do
       8NweZnhm8CMgaka6W+IjKu2OB3CeqIPDzKo+GY5ArdEcsgjtuo9n
       -----END RSA PRIVATE KEY-----
     KEY
-
-    initialize_with { attributes.values.join }
   end
 end

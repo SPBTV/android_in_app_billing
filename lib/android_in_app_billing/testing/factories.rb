@@ -33,7 +33,7 @@ FactoryGirl.define do
       data_json = data.to_json
 
       # Google uses SHA1 when signing data
-      private_key = OpenSSL::PKey::RSA.new(build(:android_in_app_billing_private_key))
+      private_key = OpenSSL::PKey::RSA.new(AndroidInAppBilling::Testing::PRIVATE_KEY)
       signature = private_key.sign(OpenSSL::Digest::SHA1.new, data_json)
       # And then encodes signature using base64
       base64_encoded_signature = Base64.encode64(signature).delete("\n")

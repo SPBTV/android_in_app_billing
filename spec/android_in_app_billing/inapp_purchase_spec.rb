@@ -60,7 +60,7 @@ RSpec.describe AndroidInAppBilling::InappPurchase do
     let(:data) { raw_inapp_purchase[:data] }
     let(:signature) { raw_inapp_purchase[:signature] }
 
-    before { AndroidInAppBilling.config.package_public_key = build(:android_in_app_billing_public_key) }
+    before { AndroidInAppBilling.config.package_public_key = AndroidInAppBilling::Testing::PUBLIC_KEY }
 
     subject { described_class.new(data: data, signature: signature).signature_valid? }
 

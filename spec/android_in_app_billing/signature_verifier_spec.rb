@@ -6,7 +6,7 @@ RSpec.describe AndroidInAppBilling::SignatureVerifier do
 
   subject { described_class.new(data: data, signature: signature).call }
 
-  before { AndroidInAppBilling.config.package_public_key = build(:android_in_app_billing_public_key) }
+  before { AndroidInAppBilling.config.package_public_key = AndroidInAppBilling::Testing::PUBLIC_KEY }
 
   context 'signature is valid' do
     it { is_expected.to be(true) }
