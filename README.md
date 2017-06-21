@@ -59,6 +59,27 @@ subscription.expires_at # => some DateTime
 # ... (other attributes, see `AndroidInAppBilling::SubscriptionPurchase` and the link above)
 ```
 
+## Testing
+
+This gem provides a factory to generate raw purchase data+signature, which you can use in your tests:
+
+```ruby
+require 'android_in_app_billing/factories'
+
+# See lib/factories/raw_inapp_purchase.rb for the list of attributes
+raw = build(:android_in_app_billing_raw_inapp_purchase)
+# => { data: "...", signature: "..." }
+
+# Purchase data is being signed using a private key from android_in_app_billing_private_key
+# factory. If you want to verify this signature, you should configure
+# AndroidInAppBilling to use correspondent public key
+AndroidInAppBilling.config.package_public_key = build(:android_in_app_billing_public_key)
+
+# Then signature verification will pass
+inapp = AndroidInAppBilling::InAppPurchase.new(raw)
+inapp.signature_valid? # => true
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

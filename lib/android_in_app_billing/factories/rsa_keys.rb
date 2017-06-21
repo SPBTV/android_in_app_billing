@@ -8,7 +8,7 @@ FactoryGirl.define do
   #
   # key.public_key.to_pem # => public key
   # key.to_pem # => private key
-  factory :public_key, class: 'String' do
+  factory :android_in_app_billing_public_key, class: 'String' do
     public_key <<-KEY.gsub(/^\s*/, '')
       -----BEGIN PUBLIC KEY-----
       MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0VZoxr2Z4Z55PR9DnBEl
@@ -24,8 +24,8 @@ FactoryGirl.define do
     initialize_with { attributes.values.join }
   end
 
-  # Is used only for receipt signing
-  factory :private_key, class: 'String' do
+  # Is used only for purchase data signing
+  factory :android_in_app_billing_private_key, class: 'String' do
     private_key <<-KEY.gsub(/^\s*/, '')
       -----BEGIN RSA PRIVATE KEY-----
       MIIEowIBAAKCAQEA0VZoxr2Z4Z55PR9DnBElxNneoXvBEofqT0lstG/TKLaNdIGn
