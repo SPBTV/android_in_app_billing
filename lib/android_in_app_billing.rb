@@ -28,4 +28,8 @@ module AndroidInAppBilling
   end
 end
 
-Dir[Pathname.new(__dir__).join('android_in_app_billing/*')].each { |path| require path }
+require_relative 'android_in_app_billing/inapp_purchase'
+require_relative 'android_in_app_billing/publisher_client'
+require_relative 'android_in_app_billing/signature_verifier'
+require_relative 'android_in_app_billing/subscription_purchase'
+require_relative 'android_in_app_billing/version'

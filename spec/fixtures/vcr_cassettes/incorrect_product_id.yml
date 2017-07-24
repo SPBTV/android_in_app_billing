@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://www.googleapis.com/oauth2/v3/token
+    uri: https://www.googleapis.com/oauth2/v4/token
     headers:
       User-Agent:
       - Faraday v0.12.1
