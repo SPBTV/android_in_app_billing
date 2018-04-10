@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    headers:
+      User-Agent:
+      - Faraday v0.12.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Tue, 10 Apr 2018 11:51:37 GMT
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303432; quic=51303431; quic=51303339; quic=51303335,quic=":443";
+        ma=2592000; v="42,41,39,35"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+         "access_token": "ya29.ElpkBLYWdVYcZmtdsOjjRH8ZoeGR38_WjWn85xOnYYS_PxAFm8sNQSDw7m9o6eW5e5U4jyKsMZlhxP468mPmJZWvStlHP-uiuqBEtZ6vCD7e0oL0nDTpwmJNj-Y",
+         "token_type": "Bearer",
+         "expires_in": 3600
+        }
+    http_version:
+  recorded_at: Tue, 10 Apr 2018 11:51:37 GMT
+- request:
+    method: post
+    uri: https://www.googleapis.com/androidpublisher/v2/applications/com.spbtv.rspec/purchases/subscriptions/spbtv_test/tokens/kicgkmmieakfkgfnkclldoao.AO-J1OyAN-PCXHeriJ7W99KLeA_hZhqOZS3vnA9a5Mo1fyFhg4iF61FMVOfCqf8B9Jc5tzknR-Et58T79LsdIEWH2vBHOkSHJDOBTnknZgaSuhKjoGXq33M2VQxbQaz_KrQLRAZGPn7-gxQXcqaxvorNj4c2Q_1jaA:revoke
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - |-
+        unknown/0.0.0 google-api-ruby-client/0.10.3 Linux/4.4.0-116-generic
+         (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Tue, 10 Apr 2018 11:51:37 GMT
+      Authorization:
+      - Bearer ya29.ElpkBLYWdVYcZmtdsOjjRH8ZoeGR38_WjWn85xOnYYS_PxAFm8sNQSDw7m9o6eW5e5U4jyKsMZlhxP468mPmJZWvStlHP-uiuqBEtZ6vCD7e0oL0nDTpwmJNj-Y
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=UTF-8
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Tue, 10 Apr 2018 11:51:39 GMT
+      Etag:
+      - '"xp-8Y0duMdFvpgAzOmqRszVLz0Q/vyGp6PvFo4RvsFtPoIWeCReyIC8"'
+      Vary:
+      - Origin
+      - X-Origin
+      Server:
+      - GSE
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303432; quic=51303431; quic=51303339; quic=51303335,quic=":443";
+        ma=2592000; v="42,41,39,35"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary
+    http_version:
+  recorded_at: Tue, 10 Apr 2018 11:51:39 GMT
+recorded_with: VCR 3.0.3
