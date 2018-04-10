@@ -22,6 +22,16 @@ module AndroidInAppBilling
       SubscriptionPurchase.new(response.to_h)
     end
 
+    # @param product_id [String]
+    # @param token [String]
+    # @return [void]
+    # @raise Google::Apis::ClientError
+    # @raise Google::Apis::ServerError
+    # @raise Signet::AuthorizationError
+    def revoke_purchase_subscription(product_id, token)
+      client.revoke_purchase_subscription(package_name, product_id, token)
+    end
+
     private
 
     attr_reader :client
