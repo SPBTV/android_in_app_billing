@@ -2,7 +2,7 @@ require 'json'
 require 'openssl'
 require 'base64'
 require 'time'
-require 'google/apis/androidpublisher_v2'
+require 'google/apis/androidpublisher_v3'
 require 'dry-configurable'
 
 # A toolkit to work with android in-app purchases

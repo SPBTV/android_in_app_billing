@@ -54,7 +54,7 @@ http_interactions:
   recorded_at: Fri, 09 Jun 2017 16:54:47 GMT
 - request:
     method: post
-    uri: https://www.googleapis.com/androidpublisher/v2/applications/com.spbtv.rspec/purchases/subscriptions/spbtv_test/tokens/wrong:revoke
+    uri: https://www.googleapis.com/androidpublisher/v3/applications/com.spbtv.rspec/purchases/subscriptions/spbtv_test/tokens/wrong:revoke
     body:
       encoding: UTF-8
       string: ''

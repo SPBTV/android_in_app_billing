@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module AndroidInAppBilling
-  # Represents SubscriptionPurchase resource from android publisher v2 API
+  # Represents SubscriptionPurchase resource from android publisher v3 API
   # @see https://developers.google.com/android-publisher/api-ref/purchases/subscriptions
   #
   class SubscriptionPurchase < SimpleDelegator

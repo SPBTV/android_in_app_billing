@@ -54,7 +54,7 @@ http_interactions:
   recorded_at: Fri, 09 Jun 2017 16:55:54 GMT
 - request:
     method: post
-    uri: https://www.googleapis.com/androidpublisher/v2/applications/com.spbtv.rspec/purchases/subscriptions/spbtv_test/tokens/kicgkmmieakfkgfnkclldoao.AO-J1OyAN-PCXHeriJ7W99KLeA_hZhqOZS3vnA9a5Mo1fyFhg4iF61FMVOfCqf8B9Jc5tzknR-Et58T79LsdIEWH2vBHOkSHJDOBTnknZgaSuhKjoGXq33M2VQxbQaz_KrQLRAZGPn7-gxQXcqaxvorNj4c2Q_1jaA:revoke
+    uri: https://www.googleapis.com/androidpublisher/v3/applications/com.spbtv.rspec/purchases/subscriptions/spbtv_test/tokens/kicgkmmieakfkgfnkclldoao.AO-J1OyAN-PCXHeriJ7W99KLeA_hZhqOZS3vnA9a5Mo1fyFhg4iF61FMVOfCqf8B9Jc5tzknR-Et58T79LsdIEWH2vBHOkSHJDOBTnknZgaSuhKjoGXq33M2VQxbQaz_KrQLRAZGPn7-gxQXcqaxvorNj4c2Q_1jaA:revoke
     body:
       encoding: UTF-8
       string: ''

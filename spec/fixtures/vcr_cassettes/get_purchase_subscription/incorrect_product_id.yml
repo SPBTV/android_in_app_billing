@@ -3,9 +3,12 @@ http_interactions:
 - request:
     method: post
     uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiIyMzgwMDEyMDM4NjMtY29tcHV0ZUBkZXZlbG9wZXIuZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL29hdXRoMi92NC90b2tlbiIsImV4cCI6MTU3NDk0MjUyNiwiaWF0IjoxNTc0OTQyNDA2LCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYW5kcm9pZHB1Ymxpc2hlciJ9.l7o4X9xqL9cCxoGDrJhSJQuQOtRJVepIjE1Xgl4oROzeb99vfr7nRWQJswhpZfsIDACIwgwz0GyM-nJW0dAUCUfKnr_ECeZzkyHgnfnpLM41KNhUj6I0DxvKsS9LUtj-RMAxHYrTgYo2bQKbM4zNCWE8sF026nGbSBzzff2D5LHi8oaLH1LWSvHk9JguFDqeS08XLFSsYOCD505uIgJciIs3Cd1SluHM-_PQiRPEKI7w_5P-F8ahV_oakz9QvJ4fUNxm9Nv0MuDsARpYxDqmPE5CvzMGp-wpbWnueuDu3nMpuNOZFaqZ6zWCu5l_nIo9WjcJ12XmLFJ1RuqBomZ0Cg
     headers:
       User-Agent:
-      - Faraday v0.12.1
+      - Faraday v0.17.0
       Content-Type:
       - application/x-www-form-urlencoded
       Accept-Encoding:
@@ -17,60 +20,59 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Cache-Control:
-      - no-cache, no-store, max-age=0, must-revalidate
-      Pragma:
-      - no-cache
-      Expires:
-      - Mon, 01 Jan 1990 00:00:00 GMT
-      Date:
-      - Fri, 09 Jun 2017 16:55:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
       Vary:
       - Origin
+      - Referer
       - X-Origin
-      Content-Type:
-      - application/json; charset=UTF-8
-      X-Content-Type-Options:
-      - nosniff
+      Date:
+      - Thu, 28 Nov 2019 12:01:06 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
       X-Frame-Options:
       - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      Server:
-      - GSE
+      X-Content-Type-Options:
+      - nosniff
       Alt-Svc:
-      - quic=":443"; ma=2592000; v="38,37,36,35"
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
-      string: |
+      string: |-
         {
-         "access_token": "ya29.ElpkBGogEIsMjioWePoa9bL-5hDDvLr_v649UdxCNZLNW7vfVDcm5RinkzTmWzpFbbD0MpVqqrzDFfcHcuYbmyHDINs1SWxklDiQmKn47gjn07IvzA9RIlIfVyQ",
-         "token_type": "Bearer",
-         "expires_in": 3600
+          "access_token": "ya29.c.Kl6zB4n9PWLrdQOAATQ2rySfq1ix79bixuJhPdDalMWmT6hqRxJzROfnv5mVff4EB38QoXmjDANkc30IvCG1yoL5xrSXC8LFPfv7O_pfA0IFd05RkxjESOkBjNb4bbBz",
+          "expires_in": 3600,
+          "token_type": "Bearer"
         }
-    http_version:
-  recorded_at: Fri, 09 Jun 2017 16:55:54 GMT
+    http_version: 
+  recorded_at: Thu, 28 Nov 2019 12:01:06 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/androidpublisher/v2/applications/com.spbtv.rspec/purchases/subscriptions/incorrect/tokens/kicgkmmieakfkgfnkclldoao.AO-J1OyAN-PCXHeriJ7W99KLeA_hZhqOZS3vnA9a5Mo1fyFhg4iF61FMVOfCqf8B9Jc5tzknR-Et58T79LsdIEWH2vBHOkSHJDOBTnknZgaSuhKjoGXq33M2VQxbQaz_KrQLRAZGPn7-gxQXcqaxvorNj4c2Q_1jaA
+    uri: https://www.googleapis.com/androidpublisher/v3/applications/com.spbtv.rspec/purchases/subscriptions/incorrect/tokens/kicgkmmieakfkgfnkclldoao.AO-J1OyAN-PCXHeriJ7W99KLeA_hZhqOZS3vnA9a5Mo1fyFhg4iF61FMVOfCqf8B9Jc5tzknR-Et58T79LsdIEWH2vBHOkSHJDOBTnknZgaSuhKjoGXq33M2VQxbQaz_KrQLRAZGPn7-gxQXcqaxvorNj4c2Q_1jaA
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - |-
-        unknown/0.0.0 google-api-ruby-client/0.12.0 Linux/4.4.0-78-generic
-         (gzip)
+      - unknown/0.0.0 google-api-ruby-client/0.34.1 Mac OS X/10.14.3 (gzip)
       Accept:
       - "*/*"
       Accept-Encoding:
       - gzip,deflate
       Date:
-      - Fri, 09 Jun 2017 16:55:54 GMT
+      - Thu, 28 Nov 2019 12:01:06 GMT
+      X-Goog-Api-Client:
+      - gl-ruby/2.6.0 gdcl/0.34.1
       Authorization:
-      - Bearer ya29.ElpkBGogEIsMjioWePoa9bL-5hDDvLr_v649UdxCNZLNW7vfVDcm5RinkzTmWzpFbbD0MpVqqrzDFfcHcuYbmyHDINs1SWxklDiQmKn47gjn07IvzA9RIlIfVyQ
+      - Bearer ya29.c.Kl6zB4n9PWLrdQOAATQ2rySfq1ix79bixuJhPdDalMWmT6hqRxJzROfnv5mVff4EB38QoXmjDANkc30IvCG1yoL5xrSXC8LFPfv7O_pfA0IFd05RkxjESOkBjNb4bbBz
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -79,30 +81,30 @@ http_interactions:
       message: Bad Request
     headers:
       Vary:
-      - Origin
-      - X-Origin
+        - Origin
+        - X-Origin
       Content-Type:
-      - application/json; charset=UTF-8
+        - application/json; charset=UTF-8
       Content-Encoding:
-      - gzip
+        - gzip
       Date:
-      - Fri, 09 Jun 2017 16:55:54 GMT
+        - Fri, 09 Jun 2017 16:55:54 GMT
       Expires:
-      - Fri, 09 Jun 2017 16:55:54 GMT
+        - Fri, 09 Jun 2017 16:55:54 GMT
       Cache-Control:
-      - private, max-age=0
+        - private, max-age=0
       X-Content-Type-Options:
-      - nosniff
+        - nosniff
       X-Frame-Options:
-      - SAMEORIGIN
+        - SAMEORIGIN
       X-Xss-Protection:
-      - 1; mode=block
+        - 1; mode=block
       Server:
-      - GSE
+        - GSE
       Alt-Svc:
-      - quic=":443"; ma=2592000; v="38,37,36,35"
+        - quic=":443"; ma=2592000; v="38,37,36,35"
       Transfer-Encoding:
-      - chunked
+        - chunked
     body:
       encoding: UTF-8
       string: |
@@ -122,5 +124,5 @@ http_interactions:
          }
         }
     http_version:
-  recorded_at: Fri, 09 Jun 2017 16:55:54 GMT
+  recorded_at: Thu, 28 Nov 2019 12:01:06 GMT
 recorded_with: VCR 3.0.3

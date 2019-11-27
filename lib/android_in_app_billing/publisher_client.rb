@@ -2,7 +2,7 @@
 require_relative 'publisher_client/client_builder'
 
 module AndroidInAppBilling
-  # Client for android publisher v2 API
+  # Client for android publisher v3 API
   #
   # @see https://developers.google.com/android-publisher/api-ref/
   #

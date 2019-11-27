@@ -21,10 +21,10 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency 'google-api-client', '~> 0.10.3'
+  spec.add_runtime_dependency 'google-api-client', '~> 0.34.1'
   spec.add_runtime_dependency 'dry-configurable', '~> 0.7'
 
-  spec.add_development_dependency 'bundler', '~> 1.14'
+  spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'factory_girl', '~> 4.0'
