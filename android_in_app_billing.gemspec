@@ -25,10 +25,10 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'dry-configurable', '~> 0.7'
 
   spec.add_development_dependency 'bundler', '~> 2.0'
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'factory_girl', '~> 4.0'
-  spec.add_development_dependency 'vcr', '~> 3.0'
+  spec.add_development_dependency 'factory_bot', '~> 5.0'
+  spec.add_development_dependency 'vcr', '~> 5.0'
   spec.add_development_dependency 'webmock', '~> 3.0'
   spec.add_development_dependency 'pry'
 end
